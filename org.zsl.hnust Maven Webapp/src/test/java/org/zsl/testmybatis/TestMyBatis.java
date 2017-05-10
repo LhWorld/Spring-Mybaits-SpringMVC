@@ -2,6 +2,7 @@ package org.zsl.testmybatis;
 
 import javax.annotation.Resource;
 
+import com.alibaba.fastjson.JSONArray;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,5 +37,11 @@ public class TestMyBatis {
 		// System.out.println(user.getUserName());
 		// logger.info("值："+user.getUserName());
 		logger.info(JSON.toJSONString(user));
+	}
+	@Test
+	public void test3(){
+		String jsonStr = "{\"A\":\"1.00\"}" ;
+		JSONArray jsonArray = JSONArray.parseArray(jsonStr);
+		logger.info(java.net.URLDecoder.decode(jsonStr));
 	}
 }

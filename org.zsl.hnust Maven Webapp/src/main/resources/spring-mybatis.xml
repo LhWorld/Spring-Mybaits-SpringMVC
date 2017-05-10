@@ -22,9 +22,9 @@
 		<property name="username" value="${username}"/>
 		<property name="password" value="${password}"/>
 		<!-- 配置初始化大小、最小、最大 -->
-		<property name="initialSize"><value>1</value></property>
-		<property name="maxActive"><value>5</value></property>
-		<property name="minIdle"><value>1</value></property>
+		<property name="initialSize" value="${initialSize}"/>
+		<property name="maxActive" value="${maxActive}"/>
+		<property name="minIdle" value="${minIdle}"/>
 		<!-- 配置获取连接等待超时的时间 -->
 		<property name="maxWait"><value>60000</value></property>
 		<!-- 配置监控统计拦截的filters -->

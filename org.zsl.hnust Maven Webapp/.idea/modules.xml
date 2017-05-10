@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HNUST.iml" filepath="$PROJECT_DIR$/HNUST.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dycd.iml" filepath="$PROJECT_DIR$/dycd.iml" />
+      <module fileurl="file://D:\dycdProject\HNUST\org.zsl.hnust Maven Webapp\dycd.iml" filepath="D:\dycdProject\HNUST\org.zsl.hnust Maven Webapp\dycd.iml" />
     </modules>
   </component>
 </project>

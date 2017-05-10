@@ -90,12 +90,13 @@
           <element id="library" level="project" name="Maven: org.jdom:jdom:1.1" />
           <element id="library" level="project" name="Maven: com.alipay:alipay-sdk-app:1.0.1" />
           <element id="library" level="project" name="Maven: org.apache.ws.xmlschema:xmlschema-core:2.0.3" />
+          <element id="library" level="project" name="Maven: org.json:json:20160810" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/HNUST-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="dycd/web/Web" />
+      <element id="javaee-facet-resources" facet="HNUST/web/Web" />
     </root>
   </artifact>
 </component>

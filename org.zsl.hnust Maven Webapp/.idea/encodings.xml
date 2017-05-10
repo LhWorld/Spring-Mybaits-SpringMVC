@@ -2,5 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/cn/hnust/controller/ClientController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/cn/hnust/controller/ServerController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/cn/hnust/controller/SocketHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/cn/hnust/pojo/SocketClient.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/cn/hnust/service/SignException.java" charset="GBK" />
   </component>
 </project>

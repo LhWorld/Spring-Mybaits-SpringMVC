@@ -351,8 +351,7 @@
 			<version>${jackson.version}</version>
 		</dependency>
 
-		<!-- fastjson json <dependency> <groupId>com.alibaba</groupId> <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version> </dependency> -->
+
 
 		<!-- xstream xml -->
 		<dependency>
@@ -429,13 +428,7 @@
 			<version>2.2</version>
 		</dependency>
 
-		<!-- 中文分词 -->
-		<!--<dependency>-->
-		<!--<groupId>org.wltea</groupId>-->
-		<!--<artifactId>analyzer</artifactId>-->
-		<!--<version>2012_u6</version>-->
-		<!--</dependency>-->
-		<!-- GENERAL UTILS end -->
+
 
 		<!-- CKFinder begin -->
 		<dependency>
@@ -473,14 +466,7 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<!-- TEST end -->
 
-		<!-- User Agent -->
-		<!--<dependency>-->
-		<!--<groupId>bitwalker</groupId>-->
-		<!--<artifactId>UserAgentUtils</artifactId>-->
-		<!--<version>1.13</version>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
@@ -495,120 +481,26 @@
 			<groupId>com.alipay</groupId>
 			<artifactId>alipay-sdk-app</artifactId>
 			<version>1.0.1</version>
-		</dependency>		<!-- https://mvnrepository.com/artifact/org.codehaus.xfire/xfire-all -->
+		</dependency>
 		<dependency>
 			<groupId>org.apache.ws.xmlschema</groupId>
 			<artifactId>xmlschema-core</artifactId>
 			<version>2.0.3</version>
 		</dependency>
-		<!-- 京东相关jar包_end -->
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160810</version>
+		</dependency>
 
-		<!-- 自定义jar依赖包 <dependency> <groupId>com.dycd.dms.postloan</groupId> <artifaccom.test.testtest-core</artifactId>
-            <version>1.0</version> <scope>system</scope> <systemPath>${project.basedir}/src/main/webapp/WEB-INF/com.test.testtest-core-1.0.jar</systemPath>
-            </dependency> -->
-
-		<!-- 使用 Jetty JSP引擎 <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-jsp</artifactId>
-            <version>${jetty.version}</version> <exclusions> <exclusion> <groupId>org.eclipse.jetty.orbit</groupId>
-            <artifactId>javax.servlet</artifactId> </exclusion> <exclusion> <groupId>org.eclipse.jetty.orbit</groupId>
-            <artifactId>org.apache.taglibs.standard.glassfish</artifactId> </exclusion>
-            </exclusions> </dependency> -->
 
 
 	</dependencies>
 
 	<build>
 		<plugins>
-			<!--&lt;!&ndash; Compiler 插件, 设定JDK版本 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-compiler-plugin</artifactId>-->
-				<!--<version>2.5.1</version>-->
-				<!--<configuration>-->
-					<!--<source>${jdk.version}</source>-->
-					<!--<target>${jdk.version}</target>-->
-					<!--<showWarnings>true</showWarnings>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
-
-			<!--&lt;!&ndash; JSP 预编译插件 jspweb.xml <plugin> <groupId>org.jasig.mojo.jspc</groupId>-->
-                <!--<artifactId>jspc-maven-plugin</artifactId> <version>2.0.0</version> <configuration>-->
-                <!--<injectString>&lt;!- - [INSERT FRAGMENT HERE] - -&gt;</injectString> </configuration>-->
-                <!--<executions> <execution> <goals> <goal>compile</goal> </goals> </execution>-->
-                <!--</executions> <dependencies> <dependency> <groupId>org.jasig.mojo.jspc</groupId>-->
-                <!--<artifactId>jspc-compiler-tomcat6</artifactId> <version>2.0.0</version> </dependency>-->
-                <!--</dependencies> </plugin> &ndash;&gt;-->
-
-			<!--&lt;!&ndash; Jetty JSP 预编译插件 web.xml <plugin> <groupId>org.mortbay.jetty</groupId>-->
-                <!--<artifactId>jetty-jspc-maven-plugin</artifactId> <version>${jetty.version}</version>-->
-                <!--<configuration> <insertionMarker>&lt;!- - [INSERT FRAGMENT HERE] - -&gt;</insertionMarker>-->
-                <!--</configuration> <executions> <execution> <goals> <goal>jspc</goal> </goals>-->
-                <!--</execution> </executions> </plugin> &ndash;&gt;-->
-
-			<!--&lt;!&ndash; 打包jar文件时，配置manifest文件，加入lib包的jar依赖 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-jar-plugin</artifactId>-->
-				<!--<version>2.4</version>-->
-				<!--<configuration>-->
-					<!--&lt;!&ndash;<encoding>${project.build.sourceEncoding}</encoding>&ndash;&gt;-->
-				<!--</configuration>-->
-				<!--&lt;!&ndash; <executions> <execution> <phase>prepare-package</phase> <goals>-->
-                    <!--<goal>jar</goal> </goals> <configuration> <classesDirectory>${project.outputDirectory}</classesDirectory>-->
-                    <!--<finalName>jeesite</finalName> <outputDirectory>${project.build.directory}/${project.artifactId}/WEB-INF/lib</outputDirectory>-->
-                    <!--<includes> <include>com/thinkgem/jeesite/**</include> </includes> </configuration>-->
-                    <!--</execution> </executions> &ndash;&gt;-->
-			<!--</plugin>-->
-
-			<!--&lt;!&ndash; 混淆代码 <plugin> <groupId>com.github.wvengen</groupId> <artifactId>proguard-maven-plugin</artifactId>-->
-                <!--<version>2.0.6</version> <executions> <execution> <phase>prepare-package</phase>-->
-                <!--<goals> <goal>proguard</goal> </goals> </execution> </executions> <configuration>-->
-                <!--<obfuscate>true</obfuscate> <options> <option>-injars ${project.build.directory}/${project.artifactId}/WEB-INF/lib/jeesite.jar</option>-->
-                <!--</options> <outjar>${project.artifactId}/WEB-INF/lib/jeesite_out.jar</outjar>-->
-                <!--<outputDirectory>${project.build.directory}</outputDirectory> <proguardInclude>${basedir}/proguard.cfg</proguardInclude>-->
-                <!--<source>${jdk.version}</source> <target>${jdk.version}</target> <encoding>${project.build.sourceEncoding}</encoding>-->
-                <!--<libs> <lib>${java.home}/lib/rt.jar</lib> <lib>${java.home}/lib/jsse.jar</lib>-->
-                <!--<lib>${java.home}/lib/jce.jar</lib> </libs> <addMavenDescriptor>false</addMavenDescriptor>-->
-                <!--</configuration> <dependencies> <dependency> <groupId>net.sf.proguard</groupId>-->
-                <!--<artifactId>proguard-base</artifactId> <version>4.9</version> <scope>runtime</scope>-->
-                <!--</dependency> </dependencies> </plugin> &ndash;&gt;-->
-
-			<!--&lt;!&ndash; war 打包插件, 设定war包名称不带版本号 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-war-plugin</artifactId>-->
-				<!--<version>2.4</version>-->
-				<!--<configuration>-->
-					<!--<packagingExcludes>-->
-						<!--&lt;!&ndash; WEB-INF/classes/com/thinkgem/jeesite/** &ndash;&gt;-->
-						<!--WEB-INF/classes/org/apache/ibatis/**,-->
-						<!--WEB-INF/classes/org/mybatis/spring/**-->
-					<!--</packagingExcludes>-->
-					<!--<warSourceExcludes>-->
-						<!--static/bootstrap/2.3.1/docs/**,-->
-						<!--static/ckeditor/_samples/**,-->
-						<!--static/ckeditor/_source/**,-->
-						<!--static/ckfinder/_samples/**,-->
-						<!--static/ckfinder/help/**,-->
-						<!--static/compressor*/**,-->
-						<!--static/jquery-jbox/2.3/docs/**,-->
-						<!--static/jquery-jbox/2.3/Skins2/**,-->
-						<!--static/jquery-validation/1.11.0/demo/**,-->
-						<!--static/jquery-ztree/3.5.12/demo/**,-->
-						<!--static/My97DatePicker/docs/**,-->
-						<!--static/supcan/doc/**,-->
-						<!--static/SuperSlide/demo/**,-->
-						<!--static/treeTable/demo/**&lt;!&ndash; , &ndash;&gt;-->
-						<!--&lt;!&ndash; userfiles/** &ndash;&gt;&lt;!&ndash; ,/**/*.jsp &ndash;&gt;-->
-						<!--,-->
-						<!--com.test.test/**-->
-					<!--</warSourceExcludes>-->
-					<!--<webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>&lt;!&ndash;-->
-						<!--<webXml>${project.basedir}/target/jspweb.xml</webXml> &ndash;&gt;-->
-					<!--<warName>${project.artifactId}</warName>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
-
-					<plugin>
+	              <plugin>
 						<groupId>org.apache.tomcat.maven</groupId>
 						<artifactId>tomcat7-maven-plugin</artifactId>
 						<version>2.2</version>
@@ -618,43 +510,6 @@
 							<uriEncoding>UTF-8</uriEncoding>
 						</configuration>
 					</plugin>
-
-			<!--&lt;!&ndash; resource插件 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-resources-plugin</artifactId>-->
-				<!--<version>2.6</version>-->
-			<!--</plugin>-->
-
-			<!--&lt;!&ndash; install插件 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-install-plugin</artifactId>-->
-				<!--<version>2.4</version>-->
-			<!--</plugin>-->
-
-			<!--&lt;!&ndash; clean插件 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-clean-plugin</artifactId>-->
-				<!--<version>2.5</version>-->
-			<!--</plugin>-->
-
-			<!--&lt;!&ndash; ant插件 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-antrun-plugin</artifactId>-->
-				<!--<version>1.7</version>-->
-			<!--</plugin>-->
-
-			<!--&lt;!&ndash; dependency插件 &ndash;&gt;-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-dependency-plugin</artifactId>-->
-				<!--<version>2.5.1</version>-->
-			<!--</plugin>-->
-
-
 
 		</plugins>
 		<resources>
